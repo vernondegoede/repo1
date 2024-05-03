@@ -1,0 +1,23 @@
+openapi: 3.1.0
+paths:
+  /api/invoices:
+    get:
+      summary: 'List invoices'
+      description: 'This endpoint lists invoices'
+      operationId: listInvoices
+      parameters:
+        -
+          name: year
+          in: query
+          required: false
+          schema:
+            type: integer
+            maximum: 2024
+            minimum: 2005
+        -
+          name: reference
+          in: query
+          required: false
+          schema:
+            type: string
+            example: blahblah
